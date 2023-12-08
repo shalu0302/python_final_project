@@ -1,14 +1,72 @@
 <!DOCTYPE html>
-<!-- saved from url=(0124)https://lms.stclaircollege.ca/bbcswebdav/pid-2982358-dt-content-rid-43510127_1/courses/DAB111-23F-003/data_table_fillin.html -->
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
-    <title>View Data</title>
-  </head>
-  <body>
-    <h1>My Dataset</h1>
-       {% for s in titanic_data %}
-      {{s}}
-      {% endfor %}
+<head>
+    <title>Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            color: #0066cc;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Page</h1>
+    <h2>This page contains the sample data from our dataset not the entire dataset</h2>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <!-- Modify this section based on your data structure -->
+                    <th>Round</th>
+                    <th>Date</th>
+                    <th>Team 1</th>
+                    <th>FT</th>
+                    <th>Team 2</th>
+            
   </body>
+</html>
+               {% for s in titanic_data %}
+                    <tr>
+                        <!-- Modify this section based on your data structure -->
+                        <td>{{ s[0] }}</td>
+                        <td>{{ s[1] }}</td>
+                        <td>{{ s[2] }}</td>
+                        <td>{{ s[3] }}</td>
+                        <td>{{ s[4] }}</td>
+                        
+                
+                        <!-- Add more fields if needed -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>
